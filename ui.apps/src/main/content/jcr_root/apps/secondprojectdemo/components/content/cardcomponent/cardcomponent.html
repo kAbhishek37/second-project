@@ -1,0 +1,16 @@
+<sly data-sly-use.multifieldAccordion="${'multifield.js' @ multifieldName='multifield'}"></sly>
+<sly data-sly-test.configured="${multifieldAccordion}"></sly>
+ 
+<sly data-sly-test="${wcmmode.edit && !configured}">
+    <div data-emptytext="${component.title}" class="cq-placeholder"></div>
+</sly>
+<div data-sly-test="${configured}" class="cardcon">
+    <ul data-sly-list="${multifieldAccordion}" class="ulmargin">
+        <div class="roster-card" id="${item.properties.pageURL}.html">
+        <img class="" src="${item.properties.linkURL}" width="90%" height="150px">
+       <p class="gap color-p">${item.properties.title @ context='html'}</p>
+       <p class="gap">${item.properties.subtitle @ context='html'}</p>
+       </div>
+    </ul>
+<a href="${properties.allcardlink}" target="blank"><button class="beanbtn">Learn more about coffee</button></a>
+</div>

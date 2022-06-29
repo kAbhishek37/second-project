@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-06-29T17:20:34.259+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/secondprojectdemo/settings/wcm/templates/dynamic-template-for-second-project"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Home Page"
+        sling:resourceType="secondprojectdemo/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <imagelink jcr:primaryType="nt:unstructured"/>
+            <exploreimagebutton
+                jcr:created="{Date}2022-06-22T13:55:42.558+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-22T14:18:22.266+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="secondprojectdemo/components/content/exploreimagebutton"
+                imagedesc="You found us! That means you're after coffee that pours and tastes like your favorite cafe, from the greatest third-wave roasters in the country. All at your fingertips."
+                imagelinkURL="/content/dam/secondprojectdemo/images/Beanz_Website_3000x1536_Homepage_Header_B_new.webp"
+                imagetitle="Fresh beans from local roasters, delivered to your door."
+                pagelink="/content/secondprojectdemo/en/home-page">
+                <image
+                    jcr:lastModified="{Date}2022-06-22T13:59:04.799+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"/>
+            </exploreimagebutton>
+            <heading
+                jcr:created="{Date}2022-06-24T19:30:31.764+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-24T19:30:57.459+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="How It Works"
+                sling:resourceType="secondprojectdemo/components/content/heading"/>
+            <howitwork_936112338
+                jcr:created="{Date}2022-06-21T21:54:56.395+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-29T17:20:34.244+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="secondprojectdemo/components/content/howitwork"
+                heading="How It Works">
+                <howitworkmultifield jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/secondprojectdemo/images/Beanz_Icon_Keep_It_Fresh.webp"
+                        testdescription="When it comes to coffee, fresh isn't just best, it’s essential. That's why we've made it our mission to pack and dispatch every order within hours of roasting before delivering it free to your door, ready to roll."
+                        title="Keep it fresh"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/secondprojectdemo/images/Beanz_Icon_Find_Your_Match.webp"
+                        testdescription="No two coffee drinkers are the same. Fact. Take our quiz to find the right bean for the job - just tell us how you like to make it, taste it and drink it."
+                        title="Find your match"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/secondprojectdemo/images/Beanz_Icon_Homegrown_Roasters.webp"
+                        testdescription="Feel good about your daily grind, knowing it’s come from the most passionate roasters in America. We’re always looking to bag new talent and find undiscovered gems."
+                        title="Homegrown roasters"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/secondprojectdemo/images/Beanz_Icon_Subscribe_and_Save.webp"
+                        testdescription="Keep the bean-afits coming when you subscribe, and never pay a dime for shipping or worry about running out of coffee again."
+                        title="Subscribe and save"/>
+                </howitworkmultifield>
+            </howitwork_936112338>
+            <yourfavoritebean_2104433941
+                jcr:created="{Date}2022-06-22T14:56:21.976+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-22T17:47:00.564+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="secondprojectdemo/components/content/yourfavoritebean"
+                beanheading="Find your perfect beans"
+                leftdesc="Brewing by hand on a V60 or Kalita? Or are you more of a passionate drip drinker? These coffees are roasted to take things to a whole new level."
+                leftimage="/content/dam/secondprojectdemo/images/filter-coffee.png"
+                lefttitle="Drip &amp; Pour Over"
+                linkURL="/content/secondprojectdemo/en/home-page"
+                rightdesc="Straight up or mellowed out with milk or creamer in a latte or cappuccino, our range of espresso beans should be just what you're after."
+                rightimage="/content/dam/secondprojectdemo/images/espresso-coffee.png"
+                righttitle="Espresso"/>
+            <heading_901594005
+                jcr:created="{Date}2022-06-24T19:32:45.141+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-24T19:32:52.844+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Meet our roasters"
+                sling:resourceType="secondprojectdemo/components/content/heading"/>
+            <cardcomponent
+                jcr:created="{Date}2022-06-22T18:58:03.996+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-28T18:06:03.578+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="secondprojectdemo/components/content/cardcomponent"
+                heading="Meet our roasters">
+                <multifield jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/demorc/instagram.jpg"
+                        pageURL="/content/secondprojectdemo/en/home-page"
+                        subtitle="instagram"
+                        title="ig"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/demorc/face.jpg"
+                        pageURL="/content/secondprojectdemo/en/home-page"
+                        subtitle="facebook"
+                        title="fb"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/demorc/linkdin.png"
+                        pageURL="/content/secondprojectdemo/en/home-page"
+                        subtitle="li"
+                        title="linkedin"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/demorc/youtube.png"
+                        pageURL="/content/secondprojectdemo/en/home-page"
+                        subtitle="yt"
+                        title="youtube"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/demorc/youtube.png"
+                        pageURL="/content/secondprojectdemo/en/home-page"
+                        subtitle="youtube"
+                        title="yt"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/demorc/linkdin.png"
+                        pageURL="/content/secondprojectdemo/en/home-page"
+                        subtitle="ln"
+                        title="linkedin"/>
+                    <item6
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/demorc/face.jpg"
+                        pageURL="/content/secondprojectdemo/en/home-page"
+                        subtitle="fb"
+                        title="facebook"/>
+                    <item7
+                        jcr:primaryType="nt:unstructured"
+                        linkURL="/content/dam/demorc/instagram.jpg"
+                        pageURL="/content/secondprojectdemo/en/home-page"
+                        subtitle="ig"
+                        title="Instagram"/>
+                </multifield>
+            </cardcomponent>
+            <heading_578824878
+                jcr:created="{Date}2022-06-23T16:15:07.836+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-23T16:16:54.111+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Coffee Lowdown"
+                sling:resourceType="secondprojectdemo/components/content/heading"/>
+            <coffee_2135381688
+                jcr:created="{Date}2022-06-23T17:55:29.023+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-29T16:58:08.353+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="secondprojectdemo/components/content/coffee"
+                coffeeimg="/content/dam/secondprojectdemo/images/coffee-101.webp"
+                pageURL="/content/secondprojectdemo/en/home-page">
+                <multifield jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        coffeedesc="When it comes to roasting, each of these three levels embody their own unique mouthfeel and experience: go lighter for bright acidity and delicate flavors, medium for balanced sweetness and acidity, or darker for a richer, sharper cup."
+                        coffeetitle="Three levels of roasting"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        coffeedesc="A blend is a mix of beans from various origins expertly combined for maximum balance and consistency. However! Single origin coffees come from a single place, often in limited supply, and are loved for their distinctive flavors and taste of place. Good news is, we offer both."
+                        coffeetitle="Blends vs Single Origin"/>
+                </multifield>
+            </coffee_2135381688>
+        </root>
+    </jcr:content>
+</jcr:root>

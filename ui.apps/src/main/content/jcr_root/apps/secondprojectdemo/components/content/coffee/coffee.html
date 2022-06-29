@@ -1,0 +1,13 @@
+<sly data-sly-use.multifieldAccordion="${'multifield.js' @ multifieldName='multifield'}"></sly>
+<sly data-sly-test.configured="${multifieldAccordion}"></sly>
+
+<div class="coffeecon">
+    <img src="${properties.coffeeimg}" width="70%" height="200px">
+    <ul data-sly-list="${multifieldAccordion}" class="ulmargin">
+        <div class="coffee-card">
+       		<h2 class="coffee-title">${item.properties.coffeetitle @ context='html'}</h2>
+       		<p class="coffee-desc">${item.properties.coffeedesc @ context='html'}</p>
+       </div>
+    </ul>
+<a href="${properties.pageURL}" target="blank"><button class="beanbtn">Learn more about coffee</button></a>
+</div>
