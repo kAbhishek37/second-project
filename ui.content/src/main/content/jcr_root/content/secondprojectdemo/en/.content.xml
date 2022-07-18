@@ -88,5 +88,10 @@
                     sling:resourceType="secondprojectdemo/components/content/sharing"/>
             </responsivegrid>
         </root>
+        <image/>
     </jcr:content>
+    <home-page/>
+    <shop-coffee/>
+    <test/>
+    <test2/>
 </jcr:root>

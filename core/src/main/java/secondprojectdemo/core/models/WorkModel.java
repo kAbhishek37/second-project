@@ -18,10 +18,10 @@ import javax.inject.Named;
 @Model(adaptables=Resource.class)
 public class WorkModel {
 	@Inject @Named("howitworkmultifield") 
-	private List<WorkListModel> workList;
+	private List<WorkListModel> worklist;
 
-	public List<WorkListModel> getWorkList() {
-        return workList;
+	public List<WorkListModel> getWorklist() {
+        return worklist;
     }
 
 }

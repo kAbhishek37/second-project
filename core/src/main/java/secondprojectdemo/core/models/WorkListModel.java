@@ -25,16 +25,16 @@ public class WorkListModel{
     }
     
     @Inject  @Named("testdescription")
-	private String testDescription;
+	private String testdescription;
     
-    public String getTestDescription() {
-		return testDescription;
+    public String getTestdescription() {
+		return testdescription;
 	}
     
     @Inject  @Named("linkURL")
-	private String linkURL;
+	private String linkurl;
     
-    public String getLinkURL() {
-		return linkURL;
+    public String getLinkurl() {
+		return linkurl;
 	}
 }

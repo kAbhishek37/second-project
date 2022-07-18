@@ -43,14 +43,14 @@ import com.day.cq.commons.TidyJsonItemWriter;
 @Component(service = Servlet.class,
 property = {
 "sling.servlet.methods=" + "GET",
-"sling.servlet.paths=" + "/secondprojectdemo/bin/api/content/v1",
+"sling.servlet.paths=" + "/secondprojectdemo/bin/api/content/v2",
 "sling.servlet.extensions=" + "json"})
 public class ExposeServletForJsonV2 extends SlingAllMethodsServlet {
 	/**
 	 * Default long serial version ID
 	 */
 	private static final long serialVersionUID = 1L;
-	private static final Logger LOG = LoggerFactory.getLogger(ExposeServletForJsonV2.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ExposeServletForJson.class);
 
 	Resource resource;
 	@Reference
@@ -78,7 +78,7 @@ public class ExposeServletForJsonV2 extends SlingAllMethodsServlet {
 				node = resource.adaptTo(Node.class);
 				NodeIterator nodeItr = node.getNodes();
 
-				iterate(nodeItr,out,nodePath);
+				iterate(nodeItr,out,nodePath,resource,request);
 				 //out.println("JSON data : "+jsonObject);
 
 			}
@@ -95,7 +95,7 @@ public class ExposeServletForJsonV2 extends SlingAllMethodsServlet {
 		out.close();
 	}
 	@SuppressWarnings("deprecation")
-	private void iterate(NodeIterator nodeItr,PrintWriter out,String strpath)
+	private void iterate(NodeIterator nodeItr,PrintWriter out,String strpath,Resource resource,SlingHttpServletRequest request)
 			throws RepositoryException, ValueFormatException, PathNotFoundException, IOException, JSONException {
 		JSONObject jsonObject = null;
 		out.println("{"+"\""+"Response"+"\""+":"+"[");
@@ -103,8 +103,15 @@ public class ExposeServletForJsonV2 extends SlingAllMethodsServlet {
 		
 			while (nodeItr.hasNext()) {
 			Node cNode = nodeItr.nextNode();
-			//response.println("CNode vallue"+cNode);
-
+			out.println(cNode.getProperties("sling:resourceType"));
+			if(cNode.getProperties("sling:resourceType").equals("wcm/foundation/components/responsivegrid"))
+			{
+				out.println("---responsivegird---");
+				resource = request.getResourceResolver().getResource(strpath);
+				Node node1 = resource.adaptTo(Node.class);
+				NodeIterator nodeItr1 = node1.getNodes();
+				iterate(nodeItr1,out,strpath,resource,request);
+			}
 			final StringWriter stringWriter = new StringWriter();
 			
 			TidyJsonItemWriter jsonWriter = new TidyJsonItemWriter(null);

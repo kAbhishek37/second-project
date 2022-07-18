@@ -130,25 +130,10 @@ ul {
     cursor: pointer;
 }
 
-.ulmargin {
-	margin:15px!important;
-}
-
-.gap {
-	margin-top:20px!important;
-    font-weight: 180;
-    font-family: "Montserrat",sans-serif;
-}
-
-.color-p {
-    font-weight: 700;
-    color: #a25e41;
-}
-
 .quizparent {
 	display: flex;
     background-color:#faf7f5;
-    padding-bottom:50px;
+    padding-bottom:10px;
 }
 
 .leftbean {
@@ -225,10 +210,11 @@ ul {
 }
 
 .beanbtndiv {
-	position: absolute;
-  	top: 44.5%;
-  	left: 50%;
-  	transform: translate(-48%, -50%);
+    display:inline-block;
+    width:100%;
+    margin:0px 10px 10px 10px;
+    padding-bottom:50px;
+    text-align: center;
 }
 
 .explorediv {
@@ -307,6 +293,98 @@ ul {
     font-size: 0.8rem;
 }
 
+/*-----Card Component----*/
+.review {
+    background: rgb(255, 255, 255);
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 15px;
+    padding: 6%;
+    margin: auto;
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.review__items {
+    text-align: center;
+    float: left;
+    width: 17%;
+    padding: 10px;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 30%);
+    height: 280px;
+    margin: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.review__items img {
+    margin-top: 25px;
+    text-align: center;
+    height: 140px;
+    width: 140px;
+}
+
+.review__items h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.review__items p {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.beten {
+    width: 88%;
+    text-align: center;
+}
+
+.review__button {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-left: 0!important;
+    margin-bottom: 25px;
+}
+
+.review__button button {
+    color: rgb(192, 229, 192);
+    background: green;
+    font-weight: bold;
+}
+
+.review__items {
+    display: none;
+}
+
+.nextprebtn {
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 50%;
+    font-size: large;
+}
+
+.ulmargin {
+    margin: 15px !important;
+}
+
+.gap {
+    margin-top: 20px !important;
+    font-weight: 180;
+    font-family: "Montserrat", sans-serif;
+}
+
+.color-p {
+    font-weight: 700;
+    color: #a25e41;
+}
+/*-----Card Component----*/
+
+
 .emailnotcon {
 	width:100%;
     height:60px;
@@ -318,6 +396,48 @@ ul {
     width:100%;
 }
 
+.emailnotright {
+    float:right;
+    width: 40%;
+    margin-right: 8%;
+}
+
+.emailnotemailfield {
+    padding: 18px 12px 0 0;
+    cursor: pointer;
+    color: #707070;
+    font-size: 1rem;
+    border: solid #a3a3a3;
+    border-width: 0 0 1px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 15px 12px 0 0;
+    margin-right:15px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    color: #2b2b2d;
+    background-color: rgba(0,0,0,0);
+}
+
+input.emailnotemailfield:focus {
+    outline-width: 0;
+}
+
+.emailnotemailsubmit {
+    border-radius: 4px;
+    background-color: #007584;
+    color: #fff;
+    padding: 9.5px 7px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    text-align: center;
+    cursor: pointer;
+    border:0;
+    width:35%;
+}
+
 .emailnotrow2 {
     width:100%;
     display:inline-block;
@@ -325,11 +445,17 @@ ul {
     margin-left:5%;
 }
 
+.emailnotrow2 p a {
+    color: #007584;
+}
+
 .emailnoth1 {
 	width:40%;
     float:left;
     margin-left:5%;
 }
+
+/*---email end---*/
 
 .footercon {
 	background-color:#2b2b2d;
