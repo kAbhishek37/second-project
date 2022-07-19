@@ -98,17 +98,11 @@ public class ExposeJsonV5 extends SlingSafeMethodsServlet {
 					continue;
 				}
 				
-				
-//				for(int i=0;i<countName.size();i++) {
-//					out.write(countName.get(i));
-//					out.println(countName.get(i));
-//				}
-				
-
 				String resourceName = cNode.getProperty("sling:resourceType").getString();
 				resourceName = resourceName.substring(resourceName.lastIndexOf('/') + 1);
 
-				int value = numberOfTimes(resourceName);
+				int value = Collections.frequency(countName, resourceName);
+				countName.add(resourceName);
 				if (value != 0) {
 					resourceName = resourceName + "_" + value;
 					//out.write("Hello"+resourceName);
@@ -124,12 +118,6 @@ public class ExposeJsonV5 extends SlingSafeMethodsServlet {
 			out.print(e);
 			out.write("e");
 		}
-	}
-
-	private int numberOfTimes(String resourceName) {
-		int value = Collections.frequency(countName, resourceName);
-		countName.add(resourceName);
-		return value;
 	}
 
 	public JSONObject resourceToJSON(final Node node) {
