@@ -36,7 +36,7 @@ public class ExposeJsonV5 extends SlingSafeMethodsServlet {
 	private static final long serialVersionUID = 1L;
 	private static final Logger LOG = LoggerFactory.getLogger(ExposeJsonV5.class);
 
-	List<String> countName = new ArrayList<>();
+	List<String> countName;
 
 	Resource resource;
 	@Reference
@@ -59,6 +59,7 @@ public class ExposeJsonV5 extends SlingSafeMethodsServlet {
 		final PrintWriter out = response.getWriter();
 		out.write("{");
 		try {
+			countName = new ArrayList<>();
 			Node node = null;
 			resource = request.getResourceResolver().getResource(nodePath + "/jcr:content/root");
 			if (resource != null) {
@@ -97,7 +98,7 @@ public class ExposeJsonV5 extends SlingSafeMethodsServlet {
 					flag = true;
 					continue;
 				}
-				
+
 				String resourceName = cNode.getProperty("sling:resourceType").getString();
 				resourceName = resourceName.substring(resourceName.lastIndexOf('/') + 1);
 
@@ -105,7 +106,7 @@ public class ExposeJsonV5 extends SlingSafeMethodsServlet {
 				countName.add(resourceName);
 				if (value != 0) {
 					resourceName = resourceName + "_" + value;
-					//out.write("Hello"+resourceName);
+					// out.write("Hello"+resourceName);
 				}
 				if (nodeItr.hasNext()) {
 					out.write("\"" + resourceName + "\"" + ":" + resourceToJSON(cNode).toString() + ",");
@@ -114,6 +115,7 @@ public class ExposeJsonV5 extends SlingSafeMethodsServlet {
 
 				}
 			}
+
 		} catch (Exception e) {
 			out.print(e);
 			out.write("e");
