@@ -8,12 +8,12 @@
                 <responsivegrid jcr:primaryType="nt:unstructured">
                     <content-default
                         jcr:description="Policy for editable layout containers"
-                        jcr:lastModified="{Date}2022-06-28T19:22:03.181+05:30"
+                        jcr:lastModified="{Date}2022-08-11T11:01:39.801+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="secondprojectsite Default"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:General,group:secondprojectdemo,/apps/secondprojectdemo/components/form/container]"
+                        components="[group:General,group:Custom RTE,group:secondprojectdemo,/apps/secondprojectdemo/components/form/container]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -27,7 +27,10 @@
                             </assetToComponentMapping>
                         </cq:authoring>
                         <jcr:content
-                            jcr:mixinTypes="[]"
+                            cq:lastReplicated="{Date}2022-08-12T14:00:31.959+05:30"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
                             jcr:primaryType="nt:unstructured"
                             mergeList="{Boolean}true"/>
                     </content-default>

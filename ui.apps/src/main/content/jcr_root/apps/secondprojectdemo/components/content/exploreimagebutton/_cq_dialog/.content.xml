@@ -33,7 +33,7 @@
                             <linkURL
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                fieldLabel="Link to"
+                                fieldLabel="Image Path"
                                 name="./imagelinkURL"
                                 rootPath="/content"/>
                             <description
@@ -45,8 +45,12 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                 fieldLabel="Link to"
-                                name="./pagelink"
-                                rootPath="/content"/>
+                                name="./pagelink"/>
+                            <btntext
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Button Title"
+                                name="./btntitle"/>
                         </items>
                     </column>
                 </items>

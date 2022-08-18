@@ -14,7 +14,8 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Model(adaptables=Resource.class)
+@Model(adaptables=Resource.class,
+defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class WorkListModel{
 	
 	@Inject @Named("title")

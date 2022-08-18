@@ -1,9 +1,18 @@
 <sly data-sly-use.accordion="${'secondprojectdemo.core.models.WorkModel'}">
-<ul class="workcon" data-sly-list="${accordion.worklist}">
-  <div class="card">
-    <img class="workimg" src="${item.linkurl @ context='html'}" width="170px" height="150px">
-    <h3 class="worktitle">${item.title @ context='html'}</h3>
-    <p class="desc">${item.testdescription @ context='html'}</p>
-  </div>
-</ul>
+  <ul
+    class="workcon"
+    data-sly-test="${accordion.worklist}"
+    data-sly-list="${accordion.worklist}"
+  >
+    <div class="card">
+      <img
+        class="workimg"
+        src="${item.linkurl @ context='html'}"
+        width="170px"
+        height="150px"
+      />
+      <h3 class="worktitle">${item.title @ context='html'}</h3>
+      <p class="desc">${item.testdescription @ context='html'}</p>
+    </div>
+  </ul>
 </sly>

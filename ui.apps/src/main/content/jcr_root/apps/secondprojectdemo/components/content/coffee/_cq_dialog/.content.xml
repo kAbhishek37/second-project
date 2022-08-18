@@ -54,14 +54,18 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                         fieldLabel="Link to"
-                                        name="./pageURL"
-                                        rootPath="/content"/>
+                                        name="./pageURL"/>
                                     <image
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                         fieldLabel="Image Path"
                                         name="./coffeeimg"
                                         rootPath="/content"/>
+                                    <coffeebtntext
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldLabel="Coffee Button Title"
+                                        name="./coffeebtntitle"/>
                                 </items>
                             </column>
                         </items>

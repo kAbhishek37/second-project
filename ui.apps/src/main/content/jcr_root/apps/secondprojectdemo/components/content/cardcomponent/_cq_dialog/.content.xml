@@ -55,8 +55,7 @@
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                             fieldLabel="Page link"
-                                                            name="./pageURL"
-                                                            rootPath="/content"/>
+                                                            name="./pageURL"/>
                                                     </items>
                                                 </column>
                                             </items>
@@ -66,8 +65,12 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                         fieldLabel="Link Of All Card"
-                                        name="./allcardlink"
-                                        rootPath="/content"/>
+                                        name="./allcardlink"/>
+                                    <cardbtntitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Button Title"
+                                        name="./cardbtntitle"/>
                                 </items>
                             </column>
                         </items>

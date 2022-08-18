@@ -1,73 +1,94 @@
-<sly data-sly-use.multifieldAccordion="${'multifield.js' @ multifieldName='multifield'}"></sly>
+<sly
+  data-sly-use.multifieldAccordion="${'multifield.js' @ multifieldName='multifield'}"
+></sly>
 <sly data-sly-test.configured="${multifieldAccordion}"></sly>
 <sly data-sly-test="${wcmmode.edit && !configured}">
-    <div data-emptytext="${component.title}" class="cq-placeholder"></div>
+  <div data-emptytext="${component.title}" class="cq-placeholder"></div>
 </sly>
-<div class="review">
+<div class="rreview">
+  <div class="review">
     <ul data-sly-list="${multifieldAccordion}" class="ulmargin">
-        <div class="review__items" onclick="openPage()">
-            <img class="" src="${item.properties.linkURL}" width="90%" height="150px">
-            <p class="gap color-p">${item.properties.title @ context='html'}</p>
-            <p class="gap">${item.properties.subtitle @ context='html'}</p>
-
-        </div>
-
+      <a href="${item.properties.pageURL}" class="review__items">
+        <img
+          class=""
+          src="${item.properties.linkURL}"
+          width="90%"
+          height="150px"
+        />
+        <p class="gap color-p">${item.properties.title @ context='html'}</p>
+        <p class="gap">${item.properties.subtitle @ context='html'}</p>
+      </a>
     </ul>
-    <div class="beten">
-        <div class="review__button">
-            <button id="prev" class="nextprebtn" onclick="previousReview()">&#8249;</button>
-                <h3 id="cardcurrbytot">0/0</h3>
-            <button id="next" class="nextprebtn" onclick="nextReview()">&#8250;</button>
-        </div>
-        <a href="${properties.allcardlink}" target="blank"><button class="beanbtn">See all roasters</button></a>
-
+  </div>
+  <div class="beten">
+    <div class="review__button">
+      <div class="crdinerdiv">
+        <button id="prev" class="nextprebtn" onclick="previousReview()">
+          &#8249;
+        </button>
+      </div>
+      <div class="crdinerdiv">
+        <h3 id="cardcurrbytot">0/0</h3>
+      </div>
+      <div class="crdinerdiv">
+        <button id="next" class="nextprebtn" onclick="nextReview()">
+          &#8250;
+        </button>
+      </div>
     </div>
+    <a
+      href="${properties.allcardlink}"
+      data-sly-test="${properties.cardbtntitle}"
+      target="blank"
+      ><button class="beanbtn">${properties.cardbtntitle}</button></a
+    >
+  </div>
 </div>
 <script>
-    let reviews = document
-            .getElementsByClassName("review__items");
-    let totalLen=reviews.length;
-    let totPage=Math.ceil(totalLen/8);
-    let indexArr=[];
-    let i;
-    for (i = 0,p=0; p < totalLen; i++,p=p+8) {
-        indexArr[i] = p;
-    }
-    indexArr[i] = totalLen;
-    let current =0;
-    let last = 1;
-    let currp=1;
-    carousel();
+  let reviews = document.getElementsByClassName("review__items");
+  let totalLen = reviews.length;
+  let totPage = Math.ceil(totalLen / 8);
+  let indexArr = [];
+  let i;
+  for (i = 0, p = 0; p < totalLen; i++, p = p + 8) {
+    indexArr[i] = p;
+  }
+  indexArr[i] = totalLen;
+  let current = 0;
+  let last = 1;
+  let currp = 1;
+  carousel();
 
-    function previousReview() {
-        current = current-1;
-        last= last- 1;
-        currp=currp-1;
-        carousel();
+  function previousReview() {
+    current = current - 1;
+    last = last - 1;
+    currp = currp - 1;
+    carousel();
+  }
+  function nextReview() {
+    current = current + 1;
+    last = last + 1;
+    currp = currp + 1;
+    carousel();
+  }
+  function carousel() {
+    if (last > indexArr.length - 1) {
+      last = 1;
+      current = 0;
+      currp = 1;
     }
-    function nextReview() {
-        current = current+1;
-        last= last+ 1;
-        currp=currp+1;
-        carousel();
+    if (current < 0) {
+      last = indexArr.length - 1;
+      current = last - 1;
+      currp = totPage;
     }
-    function carousel() {
-        if (last > indexArr.length-1) {
-            last= 1;
-            current = 0;
-            currp=1;
-        }
-        if (current < 0) {
-            last= indexArr.length-1;
-            current = last-1;
-            currp=totPage;
-        }
-        for (let i = 0; i < totalLen; i++) {
-            reviews[i].style.display = "none";
-        }
-        document.getElementById("cardcurrbytot").innerHTML=""+currp+"/"+totPage;
-        for (let i = indexArr[current]; i < indexArr[last]; i++) {
-            reviews[i].style.display = "block";
-        }
+    for (let i = 0; i < totalLen; i++) {
+      reviews[i].style.display = "none";
     }
+    document.getElementById("cardcurrbytot").innerHTML =
+      "" + currp + "/" + totPage;
+    for (let i = indexArr[current]; i < indexArr[last]; i++) {
+      reviews[i].style.display = "block";
+    }
+  }
 </script>

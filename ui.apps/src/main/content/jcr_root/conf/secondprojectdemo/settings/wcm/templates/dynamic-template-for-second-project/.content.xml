@@ -2,7 +2,7 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
-        cq:lastModified="{Date}2022-06-28T19:22:03.192+05:30"
+        cq:lastModified="{Date}2022-08-11T11:01:39.812+05:30"
         cq:lastModifiedBy="admin"
         cq:templateType="/conf/secondprojectdemo/settings/wcm/template-types/empty-page"
         jcr:description="Dynamic Template For secondprojectdemo Project"
